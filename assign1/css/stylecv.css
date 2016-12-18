@@ -88,7 +88,6 @@ height: 71px;
 /*NAV-BAR-END*/
 /*NAV-BAR-END*/
 
-
 .flex-container-col-1{
   display: flex;
   flex-direction: row;
@@ -106,11 +105,6 @@ height: 71px;
 
 
 
-
-
-
-
-
 .flex-container-col-2{
   display: flex;
   height: 600px;
@@ -119,7 +113,6 @@ height: 71px;
 }
 .flex-container-col-2:hover{
   background-color: ;
-
 }
 .flex-wrapper-col-2{ /*col-2 div*/
   display: flex;
@@ -149,6 +142,17 @@ height: 71px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*personal statement contaienr*/
 
 .col-2-flex-container{
@@ -168,13 +172,10 @@ height: 71px;
   font-size: 3em;
   color: #424243;
 }
-
 .par-1--wrap{
   display: flex;
   justify-content: center;
-
 }
-
 .col-2-text-par-1{
   color: #424243;
   letter-spacing: 0.1em;
@@ -182,7 +183,6 @@ height: 71px;
   width: 25%;
   margin-left:5%;
 }
-
 .col-2-text-par-1-right{
   color: #424243;
   letter-spacing: 0.1em;
@@ -190,47 +190,111 @@ height: 71px;
   width: 25%;
   margin-left:5%;
 }
+.after-arrow-col-2{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  background-color: #3990b9;
+}
+.after-arrow-col-2-a{
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #E5E5E5;
+  background-color:  #3990b9;
+}
+/*skills*/
+.flex-container-skills{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  background-color: #3990b9;
+}
+.col-3-heading{
+  align-self: center;
+  font-weight: 400;
+  font-size: 3em;
+  color: #E5E5E5;
+}
+.ul-col-3-skills{
+  display: inline-flex;
+  justify-content: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.col-2-text-par-2{
+.li-col-3-skills{
+  list-style-type: none;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  padding-right: 50px;
+  color: #E5E5E5;
+}
+/*education start*/
+.flex-container-col-4{
   display: flex;
   flex-direction: row;
+  width: 100%;
+  background-color: #E5E5E5;
+  height: 300px;
+}
+.li-heading-uni, .li-heading-college, .li-heading-school{
+  display: flex;
+  justify-content: center;
+  font-size: 2.6em;
+  color: #42424;
+}
+li{
+  list-style-type: none;
+}
+.col-4-article-1{
+  flex-grow: 1;
+  width: 33%;
+  background-color: #E5E5E5;
+  transition: 0.9s;
+}
+.col-4-article-2{
+  flex-grow: 1;
+  width: 33%;
+  background-color: #E5E5E5;
+  transition: 0.9s;
+}
+.col-4-article-3{
+  flex-grow: 1;
+  width: 33%;
+  background-color: #E5E5E5;
+  transition: 0.9s;
+}
+.col-4-article-1:hover, .col-4-article-2:hover, .col-4-article-3:hover{
+  background-color: #327ea2;
+}
+.li-col-4{
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+  padding-top: 5px;
   color: #424243;
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
+  padding: 3px;
+}
+.li-inner-col-4{
+  list-style-type: circle;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  color: #E5E5E5;
 }
 
 
 
 
+/* @media */
+
+@media screen and (max-width: 980px){
+  
 
 
 
 
 
 
-.col-2-par-1{
-  flex-grow: 1;
-  width: 50%;
-}
-.col-2-par-2{
-  flex-grow: 1;
-    width: 50%;
+
 }
