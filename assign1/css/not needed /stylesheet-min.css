@@ -245,6 +245,89 @@ background-color: #3990b9;
 }
 /*END of index.html*/
 /*cv.hmtl start*/
+
+
+.nav-image{
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 100%;
+margin-left: 2%;
+margin-top: -2px;
+height: 71px;
+}
+.nav-logo{
+  width: 150px;
+  height: 150px;
+  color: #1C4C55;
+}
+.contianer-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  height: 71px;
+  background-color: #3990b9;
+}
+.nav-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.ul-nav{
+  list-style-type: none;
+    display: inline-flex;
+    margin-right: 10%;
+    margin-top: .8%;
+}
+.li-nav{
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.1em;
+    color: #1C4C55;
+}
+.li-nav a {/*start of animation // editing the href*/
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 8px 0;
+  color: #2f2f2f;
+  text-decoration: none;
+}
+.li-nav a:hover{
+  color: #434343;
+  text-decoration: none;
+}
+.li-nav a:before, a:after {/*editing different key frames of the animation, making the like follow after hover // editing the href*/
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  background: #434343;
+}
+.li-nav a:before {/*Before hover*/
+  left: 0;
+}
+.li-nav a:after {/*After the hover*/
+  right: 0;
+  background: #434343;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.li-nav a:hover:before {
+  background: #434343;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.li-nav a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}/*NAV-BAR-END*/
+/*NAV-BAR-END*/
+/*NAV-BAR-END*/
+
 .flex-container-col-1{
   display: flex;
   flex-direction: row;
@@ -270,7 +353,15 @@ background-color: #3990b9;
   color: #1C4C55;
   width: 25%;
 }
+
+
+
+
+
+
 /*flex col 1 end */
+
+
 .flex-container-col-2{
   display: flex;
   height: 600px;
@@ -433,90 +524,6 @@ li{
   font-size: 1em;
   color: #E5E5E5;
 }
-/*cv end*/
-
-.flex-wrapper-container {
-  display: flex;
-  width: 100%; }
-
-.flex-container-l-col-bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 30%;
-  height: 600px;
-  background-color: #E5E5E5;
- }
-
-.image-container-l-col-bio {
-  max-width: 100%;
-  max-height: 50%;
-  align-self: center; }
-
-.l-col-header-bio {
-  align-self: center;
-  margin-top: -70px;
-  font-size: 1.2em;
-  font-family: "Roboto", sans-serif;
-  color: #444243; }
-
-.p-l-col-bio {
-  text-align: center;
-  margin-top: -10px;
-  color: #3990b9;
-  font-size: 0.9em;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
-
-.flex-container-r-col-bio {
-  display: flex;
-  width: 100%;
-  margin-top: 5%;
-  height: 600px;
-  background-color: #E5E5E5; }
-
-.wrapper-r-col-bio {
-  margin-top: 17%;
-  margin-right: 7%;
-  margin-left: 7%; }
-
-.r-col-header {
-  font-family: "Roboto", sans-serif;
-  color: #444243;
-  font-size: 0.9em;
-  font-weight: 900; }
-
-.r-col-about-me {
-  width: 650px;
-  text-align: justify;
-  font-family: "Roboto", sans-serif;
-  color: #444243;
-  font-weight: 400;
-  font-size: 0.9em; }
-
-.social-icons-bio {
-  margin-top: 7%;
-  border-top: 1px solid #cfcfcf;
-  width: 300px; }
-
-.fb-icon-bio , .ig-icon-bio , .git-icon-bio , .bh-icon-bio , .tw-icon-bio{
-  max-width: 10%;
-  max-height: 10%;
-  margin-top: 5%;
-}
-a {
-  text-decoration: none;
-}
-
-
-
-@media screen and (max-width: 1200px){
-  .r-col-about-me{
-    width: 450px;
-  }
-}
-
-
 /*     @ media     */
 /*medium screens*/
 @media screen and (max-width: 763px){
@@ -606,25 +613,15 @@ flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+
+
 .footer-container--cv{
   margin-top: 70%;
 }
-/*Bio.html end*/
 
 
 
 
-
-
-
-
-
-
-
-.r-col-about-me{
-  width: 300px;
-}
-}
 /*smaller screens*/
 @media screen and (max-width: 500px){
   .contianer-nav{
@@ -695,6 +692,7 @@ flex-wrap: wrap;
   }
   .li-col-3-skills{
     font-size: 0.9em;
+
   }
   .footer-container--cv{
     margin-top: 95%;

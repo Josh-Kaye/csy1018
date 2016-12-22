@@ -1,0 +1,86 @@
+body {
+  background-color: #3990b9; }
+
+.flex-wrapper-container {
+  display: flex;
+  width: 100%; }
+
+.flex-container-l-col-bio {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 600px;
+  background-color: #E5E5E5;
+  box-shadow: 2px 0px 11px 0px rgba(50, 50, 50, 0.54); }
+
+.image-container-l-col-bio {
+  max-width: 100%;
+  max-height: 50%;
+  align-self: center; }
+
+.l-col-header-bio {
+  align-self: center;
+  margin-top: -70px;
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  color: #444243; }
+
+.p-l-col-bio {
+  text-align: center;
+  margin-top: -10px;
+  color: #3990b9;
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.flex-container-r-col-bio {
+  display: flex;
+  margin-left: 3%;
+  width: 70%;
+  height: 600px;
+  background-color: #E5E5E5; }
+
+.wrapper-r-col-bio {
+  margin-top: 17%;
+  margin-right: 7%;
+  margin-left: 7%; }
+
+.r-col-header {
+  font-family: "Roboto", sans-serif;
+  color: #444243;
+  font-size: 0.9em;
+  font-weight: 900; }
+
+.r-col-about-me {
+  width: 650px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  color: #444243;
+  font-weight: 400;
+  font-size: 0.9em; }
+
+.social-icons-bio {
+  margin-top: 7%;
+  border-top: 1px solid #cfcfcf;
+  width: 300px; }
+
+.fb-icon-bio {
+  max-width: 10%;
+  max-height: 10%;
+  margin-top: 5%; }
+
+.tw-icon-bio {
+  max-width: 10%;
+  max-height: 10%; }
+
+.bh-icon-bio {
+  max-width: 10%;
+  max-height: 10%; }
+
+.git-icon-bio {
+  max-width: 10%;
+  max-height: 10%; }
+
+.ig-icon-bio {
+  max-width: 10%;
+  max-height: 10%; }
