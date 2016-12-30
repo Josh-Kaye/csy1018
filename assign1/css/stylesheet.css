@@ -1,21 +1,21 @@
 /*joshua kaye csy1018 (assign1) - stylesheet.css*/
-body{ /*this is the body of the hypertext doc // will be the perent of the chilldren within it*/
-  display: flex;/*we want to body to have a display of flex, so flexbox cmd is used*/
-  display: -webkit-flex; /* Safari */
-   -webkit-flex-direction: column;
-  min-height: -100vh; /*percentage vh=Vertical and Horozontal margins*/
-  margin: 0; /*Magin from top set to 0 */
-  font-family: 'Roboto', sans-serif; /*Defult Page Text*/
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: -100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
   background-color: #3990b9;
 }
+/*nav start*/
 .nav-image{
-display: flex;
-flex-direction: row;
-align-items: center;
-width: 100%;
-margin-left: 2%;
-margin-top: -2px;
-height: 71px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-left: 2%;
+  margin-top: -2px;
+  height: 71px;
 }
 .nav-logo{
   width: 150px;
@@ -28,7 +28,8 @@ height: 71px;
   justify-content: flex-end;
   width: 100%;
   height: 71px;
-  background-color: #3990b9;
+  box-shadow: 0px 2px 0px -1px rgba(0,0,0,0.35);
+  background-color: #E5E5E5;
 }
 .nav-wrapper{
   display: flex;
@@ -38,9 +39,9 @@ height: 71px;
 }
 .ul-nav{
   list-style-type: none;
-    display: inline-flex;
-    margin-right: 10%;
-    margin-top: .8%;
+  display: inline-flex;
+  margin-right: 10%;
+  margin-top: .8%;
 }
 .li-nav{
   padding: 10px;
@@ -86,10 +87,11 @@ height: 71px;
   background: transparent;
   width: 100%;
   transition: 0s;
-}/*NAV-BAR-END*/
-/*NAV-BAR-END*/
-/*NAV-BAR-END*/
+}
 
+/*nav bar end*/
+
+/*index.html start*/
 .continer-un{/* container-under-nav*/
   display: flex;
   flex-wrap: wrap;
@@ -201,16 +203,17 @@ background-color: #3990b9;
   text-decoration: none;
   color: black;
 }
-/* END OF CONTIANER CIR */
+/*end of index.html*/
 
-/*footer*/
+
+/*footer start*/
 .footer-container{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-top: 1px solid #3e3e3e;
+  border-top: 1px solid #444243;
 }
 .footer-container--cv{
   display: flex;
@@ -218,7 +221,7 @@ background-color: #3990b9;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-top: 1px solid #3e3e3e;
+  border-top: 1px solid #444243;
 }
 .footer{
   width: 100%;
@@ -243,14 +246,16 @@ background-color: #3990b9;
   max-width: 60px;
   max-height: 60px;
 }
-/*END of index.html*/
+/*end of footer*/
+
+
 /*cv.hmtl start*/
 .flex-container-col-1{
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  background-color: #E5E5E5;
+  background-color: #3990b9;
   height: 125px;
 }
 .link{
@@ -298,14 +303,13 @@ background-color: #3990b9;
 .header-col-2{ /*Text on top of image*/
   display: inline-block;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: #E5E5E5;
   font-size: 3em;
 }
-/*personal statement contaienr*/
-
+/*personal statement container*/
 .col-2-flex-container{
   display: flex;
   background-color: #E5E5E5;
@@ -383,130 +387,175 @@ background-color: #3990b9;
   color: #E5E5E5;
 }
 /*education start*/
-.flex-container-col-4{
+.flex-container-flip{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  background-color: #E5E5E5;
-  height: 300px;
+  height: 500px;
 }
-.li-heading-uni, .li-heading-college, .li-heading-school{
+
+.container{
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  height: 400px;
+}
+.container:hover .card-flip{
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #484848;
+}
+.card-flip{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.front{
   display: flex;
   justify-content: center;
-  font-size: 2.6em;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
   color: #424243;
+  backface-visibility: hidden;
+  background-color: #E5E5E5;
+  flex-grow: 1;
+  box-shadow: -5px 5px 5px #484848;
+}
+.back{
+  display: flex;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  backface-visibility: hidden;
+  background-color: #aaa;
+}
+
+.education-wrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ul-uni .ul-college .ul-school{
+  justify-content: center;
+  flex-grow: 1;
+}
+.li-uni, .li-college, .li-school{
+  list-style-type:  none;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-left: 20px;
 }
 li{
   list-style-type: none;
 }
-.col-4-article-1{
-  flex-grow: 1;
-  width: 33%;
-  background-color: #E5E5E5;
-  transition: 0.9s;
-}
-.col-4-article-2{
-  flex-grow: 1;
-  width: 33%;
-  background-color: #E5E5E5;
-  transition: 0.9s;
-}
-.col-4-article-3{
-  flex-grow: 1;
-  width: 33%;
-  background-color: #E5E5E5;
-  transition: 0.9s;
-}
-.col-4-article-1:hover, .col-4-article-2:hover, .col-4-article-3:hover{
-  background-color: #327ea2;
-}
-.li-col-4{
-  letter-spacing: 0.1em;
-  font-size: 1.1em;
-  padding-top: 5px;
-  color: #424243;
-  padding: 3px;
-}
-.li-inner-col-4{
-  list-style-type: circle;
-  letter-spacing: 0.1em;
-  font-size: 1em;
-  color: #E5E5E5;
-}
+
+
+
+
+
+
+
+
+
+
+
 /*cv end*/
 
-.flex-wrapper-container {
-  display: flex;
-  width: 100%; }
+/*bio.html start*/
+.contianer-nav {
+  background-color: #E5E5E5; }
 
-.flex-container-l-col-bio {
+.flex-container-bio {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 30%;
-  height: 600px;
-  background-color: #E5E5E5;
- }
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  margin: auto;
+  width: 80%;
+  height: 650px;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #E5E5E5; }
 
-.image-container-l-col-bio {
-  max-width: 100%;
-  max-height: 50%;
-  align-self: center; }
+.header-image {
+  width: 65%; }
 
-.l-col-header-bio {
-  align-self: center;
-  margin-top: -70px;
+.col-1-header {
+  text-align: center;
+  margin-top: -125px;
   font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  color: #444243;
+  font-weight: 400; }
+
+.p-col-1 {
+  text-align: center;
+  position: relative;
+  font-size: 0.8em;
   font-family: "Roboto", sans-serif;
   color: #444243; }
 
-.p-l-col-bio {
+.col-2-bio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px; }
+
+.col-2-header-bio {
+  font-size: 0.8em;
   text-align: center;
-  margin-top: -10px;
-  color: #3990b9;
-  font-size: 0.9em;
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
 
-.flex-container-r-col-bio {
-  display: flex;
-  width: 100%;
-  margin-top: 5%;
-  height: 600px;
-  background-color: #E5E5E5; }
-
-.wrapper-r-col-bio {
-  margin-top: 17%;
-  margin-right: 7%;
-  margin-left: 7%; }
-
-.r-col-header {
-  font-family: "Roboto", sans-serif;
-  color: #444243;
-  font-size: 0.9em;
-  font-weight: 900; }
-
-.r-col-about-me {
-  width: 650px;
+.col-2-par-bio {
   text-align: justify;
-  font-family: "Roboto", sans-serif;
-  color: #444243;
-  font-weight: 400;
-  font-size: 0.9em; }
+  font-weight: 300;
+  font-size: 0.8em;
+  font-family: "Roboto", sans-serif; }
 
 .social-icons-bio {
-  margin-top: 7%;
-  border-top: 1px solid #cfcfcf;
-  width: 300px; }
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 8%;
+  border-top: top 1px solid #444243;
+  width: 30%; }
 
-.fb-icon-bio , .ig-icon-bio , .git-icon-bio , .bh-icon-bio , .tw-icon-bio{
-  max-width: 10%;
-  max-height: 10%;
-  margin-top: 5%;
-}
+.fb-icon-bio, .tw-icon-bio, .ig-icon-bio, .git-icon-bio, .bh-icon-bio {
+  display: flex;
+  max-width: 100%;
+  max-height: 10%; }
+
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+.contianer-footer {
+  display: flex;
+  margin-top: 7%;
+  height: 100px;
+  background-color: #E5E5E5;
+  box-shadow: 0px -2px 0px -1px rgba(0, 0, 0, 0.35); }
+
+/*bio.html end*/
+
+/*contact start*/
+
+
+
+
+
 
 
 
@@ -526,7 +575,6 @@ a {
   align-self: flex-end;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #3990b9;
 }
 .li-nav{
 font-size: 0.9em;
@@ -566,6 +614,7 @@ flex-wrap: wrap;
   justify-content: flex-end;
   order:20;
 }/*END OF INDEX.html*/
+
 /*start of cv.html*/
 /* col-1*/
 .col-1-icon-one , .col-1-icon-two , .col-1-icon-three{
@@ -576,14 +625,15 @@ flex-wrap: wrap;
   font-size: 0.8em;
 }
 /* col-2*/
-.header-col-2{
-  font-size: 2.2em;
-}
+
 .col-2-heading{
   font-size: 2.2em;
 }
 .par-1--wrap{
   flex-wrap: wrap;
+}
+.col-2-background-image{
+  display: none;
 }
 .col-2-text-par-1 , .col-2-text-par-1-right {
   width: 100%;
@@ -597,17 +647,14 @@ flex-wrap: wrap;
   padding-right: 50px;
   height: 600px;
 }
+.li-uni, .li-college, .li-school{
+  font-size: 1em;
+  margin-left: 5px;
+}
 
-.flex-container-col-4{
-  flex-direction: column;
-}
-.col-4-article-1,.col-4-article-2,.col-4-article-3{
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
+
 .footer-container--cv{
-  margin-top: 70%;
+  margin-top: 20%;
 }
 /*Bio.html end*/
 
@@ -681,8 +728,13 @@ flex-wrap: wrap;
     font-size: 0.7em;
   }
   /* col-2*/
+  .flex-container-col-2{
+    display: none;
+  }
   .header-col-2{
-    font-size: 1.7em;
+    font-size: 1.8em;
+    top: 50%;
+    left: 50%;
   }
   .col-2-heading{
     font-size: 1.9em;
@@ -695,6 +747,10 @@ flex-wrap: wrap;
   }
   .li-col-3-skills{
     font-size: 0.9em;
+    flex-direction: column;
+  }
+  .li-uni, .li-college, .li-school{
+    font-size: 0.8em;
   }
   .footer-container--cv{
     margin-top: 95%;
